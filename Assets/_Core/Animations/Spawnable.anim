@@ -403,4 +403,11 @@ AnimationClip:
     flags: 0
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 1
+    functionName: Disable
+    data: 
+    objectReferenceParameter: {fileID: 2903580175022604851, guid: 82207447d764b41658f9b53905be9066, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

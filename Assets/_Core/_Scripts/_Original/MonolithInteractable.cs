@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -18,12 +19,16 @@ namespace _Core._Scripts._Original
         [Header("Trigger Objects")] [SerializeField]
         private GameObject doorToOpen;
 
+        private bool isHit;
+        private readonly HashSet<GameObject> spawnedObjects = new();
+
         private void OnCollisionEnter2D(Collision2D other)
         {
+            if (this.isHit) return;
             var normal = other.contacts.FirstOrDefault().normal;
-            
+
             Debug.Log(normal);
-            
+
             if (!other.gameObject.CompareTag("Player") && normal.y < 0.2f ||
                 this.prefabToSpawn == null || this.spawnPoint == null || this.particles == null ||
                 this.audioSource == null || this.audioClip == null || this.doorToOpen == null) return;
@@ -41,11 +46,13 @@ namespace _Core._Scripts._Original
         {
             for (var i = 0; i < this.spawnCount; i++)
             {
-                Instantiate(this.prefabToSpawn, this.spawnPoint.position, Quaternion.identity);
+                this.spawnedObjects.Add(Instantiate(this.prefabToSpawn, this.spawnPoint.position + Vector3.up * i,
+                    Quaternion.identity));
                 yield return new WaitForSeconds(this.spawnDelayInSeconds);
             }
 
             this.particles.Play();
+            this.isHit = true;
         }
     }
 }

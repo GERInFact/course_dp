@@ -17141,7 +17141,7 @@ MonoBehaviour:
   prefabToSpawn: {fileID: 2903580175022604851, guid: 82207447d764b41658f9b53905be9066, type: 3}
   spawnDelayInSeconds: 0.6109175
   spawnPoint: {fileID: 1263417006}
-  spawnCount: 1
+  spawnCount: 3
   particles: {fileID: 467610758}
   audioSource: {fileID: 1035013111}
   audioClip: {fileID: 8300000, guid: 12d8d3b7dd53b4fdf85a9ce923964f56, type: 3}
