@@ -73,3 +73,7 @@ crashlytics-build.properties
 
 # macOS
 .DS_Store
+
+# Office temporary lock files
+~$*
+*.tmp
