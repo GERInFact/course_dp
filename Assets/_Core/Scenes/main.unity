@@ -275,6 +275,7 @@ GameObject:
   - component: {fileID: 107127303}
   - component: {fileID: 107127305}
   - component: {fileID: 107127304}
+  - component: {fileID: 107127306}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
@@ -3965,7 +3966,7 @@ ParticleSystem:
   CollisionModule:
     enabled: 0
     serializedVersion: 4
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
@@ -5100,6 +5101,19 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &107127306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107127302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2abee894dcf74c0d95cfccfe9713b5c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_Core._Scripts._Original.ParticleEmitter
+  particles: {fileID: 107127305}
 --- !u!1 &140192105
 GameObject:
   m_ObjectHideFlags: 0
@@ -16841,6 +16855,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1574520150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574520143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39fe6daf39164785b152642bef70c27f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_Core._Scripts._Original.SoundEffectPlayer
+  audioClip: {fileID: 8300000, guid: 22699826c6b2641b896c958808a072c0, type: 3}
+  audioSource: {fileID: 1574520147}
 --- !u!1001 &1578728137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17138,14 +17166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f47f79bc8530f4f7a8999805a4891ac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_Core._Scripts._Original.MonolithInteractable
-  prefabToSpawn: {fileID: 2903580175022604851, guid: 82207447d764b41658f9b53905be9066, type: 3}
-  spawnDelayInSeconds: 0.6109175
-  spawnPoint: {fileID: 1263417006}
-  spawnCount: 3
-  particles: {fileID: 467610758}
-  audioSource: {fileID: 1035013111}
-  audioClip: {fileID: 8300000, guid: 12d8d3b7dd53b4fdf85a9ce923964f56, type: 3}
-  doorToOpen: {fileID: 1582340814}
 --- !u!1001 &1616102376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17225,14 +17245,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f47f79bc8530f4f7a8999805a4891ac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_Core._Scripts._Original.MonolithInteractable
-  prefabToSpawn: {fileID: 2903580175022604851, guid: 82207447d764b41658f9b53905be9066, type: 3}
-  spawnDelayInSeconds: 0.291805
-  spawnPoint: {fileID: 140192106}
-  spawnCount: 2
-  particles: {fileID: 107127305}
-  audioSource: {fileID: 1574520147}
-  audioClip: {fileID: 8300000, guid: 22699826c6b2641b896c958808a072c0, type: 3}
-  doorToOpen: {fileID: 1018977551}
 --- !u!1001 &1698626915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17952,6 +17964,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4257119288907752033, guid: 06d6616d96a924f0781147801b4a5682, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1574520148}
+    - targetCorrespondingSourceObject: {fileID: 4257119288907752033, guid: 06d6616d96a924f0781147801b4a5682, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1574520150}
     - targetCorrespondingSourceObject: {fileID: 8384963060502764985, guid: 06d6616d96a924f0781147801b4a5682, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1681175894}
